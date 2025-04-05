@@ -1,0 +1,33 @@
+name: Build and Test Java Project with H2
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # 2. Set up Java 11
+      - name: Set up Java 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'  # Using AdoptOpenJDK (alternative: adoptium or zulu)
+
+      # 3. Build with Maven
+      - name: Build with Maven
+        run: mvn clean install
+
+      # 4. Run tests
+      - name: Run tests
+        run: mvn test

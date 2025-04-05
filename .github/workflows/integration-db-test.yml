@@ -1,0 +1,29 @@
+name: Teste de Integração com Banco de Dados
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  integration-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Subir a aplicação com H2
+        run: mvn clean package && java -jar target/*.jar &
+        env:
+          SPRING_DATASOURCE_URL: jdbc:h2:mem:bancoMemoria;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+
+      - name: Esperar a aplicação iniciar
+        run: sleep 10
+
+      - name: Executar os testes de integração com o banco de dados
+        run: mvn verify -DskipTests=false
