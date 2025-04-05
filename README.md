@@ -32,35 +32,26 @@ O propósito é **testar os limites do Spring Boot e do Spring Data JPA**, enten
    ```bash
    git clone https://github.com/isaccanedo/spring-boot-single-class-experiment.git
    cd spring-boot-single-class-experiment
-
-   spring.datasource.url=jdbc:h2:mem:bancoMemoria
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-spring.h2.console.enabled=true
-
-
+   ```
+  
 ## Configure o banco de dados no application.properties:
 ```
 Exemplo com H2 (memória):
 
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driverClassName=org.h2.Driver
+# Configuração do banco de dados H2 em memória
+spring.datasource.url=jdbc:h2:mem:bancoMemoria
+spring.datasource.driver-class-name=org.h2.Driver
 spring.datasource.username=sa
 spring.datasource.password=
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-spring.h2.console.enabled=true
-```
-## Exemplo com MySQL:
-```
-spring.datasource.url=jdbc:mysql://localhost:3306/testdb
-spring.datasource.username=root
-spring.datasource.password=suasenha
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-```
 
+# Configuração do Hibernate para H2
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+
+# Configuração para console H2 (opcional)
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+```
 Rode o projeto:
 ```
 ./mvnw spring-boot:run
