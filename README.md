@@ -20,8 +20,7 @@ O propósito é **testar os limites do Spring Boot e do Spring Data JPA**, enten
 - Spring Web
 - Spring Data JPA
 - Banco de dados:
-  - H2 (em memória) ou
-  - MySQL (externo)
+- H2 (em memória)
 - Maven
 
 ---
