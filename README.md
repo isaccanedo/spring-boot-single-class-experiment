@@ -68,11 +68,17 @@ GET http://localhost:8080/apiV1/funcionarios
 
 @SpringBootApplication
 public class SpringBootMysqlRestApiTutorialApplication {
+
     // Controller
+    
     // Repositório (interface)
+    
     // Entidade
+    
     // Exceção personalizada
+    
     // Bean manual de repository
+    
 }
 
 **OBSERVAÇÃO**
