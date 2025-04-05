@@ -33,7 +33,7 @@ O propósito é **testar os limites do Spring Boot e do Spring Data JPA**, enten
    git clone https://github.com/isaccanedo/spring-boot-single-class-experiment.git
    cd spring-boot-single-class-experiment
 
-   spring.datasource.url=jdbc:h2:mem:testdb
+   spring.datasource.url=jdbc:h2:mem:bancoMemoria
 spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=sa
 spring.datasource.password=
