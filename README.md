@@ -60,8 +60,9 @@ spring.datasource.username=root
 spring.datasource.password=suasenha
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-Rode o projeto:
+```
 
+Rode o projeto:
 ```
 ./mvnw spring-boot:run
 ```
