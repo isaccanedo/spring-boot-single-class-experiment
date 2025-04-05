@@ -64,26 +64,22 @@ GET http://localhost:8080/apiV1/funcionarios
 ```
 
 # 📁 Estrutura do projeto (aninhada)
-**O projeto foi intencionalmente criado com tudo dentro de uma única classe:**
-
+**O projeto foi intencionalmente criado com tudo dentro de uma única classe**
+```
 @SpringBootApplication
 public class SpringBootMysqlRestApiTutorialApplication {
-
-    // Controller
-    
-    // Repositório (interface)
-    
-    // Entidade
-    
-    // Exceção personalizada
-    
-    // Bean manual de repository
-    
+    // Controller    
+    // Repositório (interface)    
+    // Entidade    
+    // Exceção personalizada    
+    // Bean manual de repository    
 }
+```
 
 **OBSERVAÇÃO**
 ```
-Isso não é uma boa prática para aplicações reais, mas é uma ótima forma de entender como o Spring Boot funciona por baixo dos panos.
+Isso não é uma boa prática para aplicações reais, mas é uma ótima forma de entender como o Spring Boot
+funciona por baixo dos panos.
 ```
 
 ### ⚙️ Como o Spring reconhece o Repository aninhado?
