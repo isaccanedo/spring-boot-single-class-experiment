@@ -31,5 +31,5 @@ O propósito é **testar os limites do Spring Boot e do Spring Data JPA**, enten
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/spring-boot-single-class-experiment.git
+   git clone https://github.com/isaccanedo/spring-boot-single-class-experiment.git
    cd spring-boot-single-class-experiment
