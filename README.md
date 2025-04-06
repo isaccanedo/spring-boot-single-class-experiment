@@ -82,7 +82,7 @@ Isso não é uma boa prática para aplicações reais, mas é uma ótima forma d
 funciona por baixo dos panos.
 ```
 
-### ⚙️ Como o Spring reconhece o Repository aninhado?
+## ⚙️ Como o Spring reconhece o Repository aninhado?
 Normalmente, o Spring Data não escaneia repositórios aninhados.
 Neste experimento, resolvemos isso com injeção manual via JpaRepositoryFactory:
 
